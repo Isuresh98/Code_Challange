@@ -32,5 +32,7 @@ public class Playar_Contrall : MonoBehaviour
         _rbody.velocity = _velocityPoint;
 
 
+
+
     }//Update
 }
