@@ -14,36 +14,42 @@ public class player_Scale : MonoBehaviour
     {
            _renderer = GetComponent<Renderer>();
 
-    }
+    }//Start
+
     // Update is called once per frame
     void Update()
     {
         Scale();
+        Color();
+
+    }//Update
+
+    private void Color()
+    {
         if (Input.GetKeyDown(KeyCode.R))
         {
 
-            _renderer.material.color = Color.red;
+            _renderer.material.color = UnityEngine.Color.red;
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
 
-            _renderer.material.color = Color.blue;
+            _renderer.material.color = UnityEngine.Color.blue;
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
 
-            _renderer.material.color = Color.green;
+            _renderer.material.color = UnityEngine.Color.green;
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
 
-            _renderer.material.color = Color.yellow;
+            _renderer.material.color = UnityEngine.Color.yellow;
         }
-
-    }//Update
+    }//Color
 
     private void Scale()
     {
@@ -51,5 +57,5 @@ public class player_Scale : MonoBehaviour
         {
             transform.localScale = new Vector3(_scaleAmount, _scaleAmount, _scaleAmount);
         }
-    }
+    }//Scale
 }
