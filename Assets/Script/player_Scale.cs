@@ -20,34 +20,34 @@ public class player_Scale : MonoBehaviour
     void Update()
     {
         Scale();
-        Color();
+        ColorContrall();
 
     }//Update
 
-    private void Color()
+    private void ColorContrall()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
 
-            _renderer.material.color = UnityEngine.Color.red;
+            _renderer.material.color =Color.red;
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
 
-            _renderer.material.color = UnityEngine.Color.blue;
+            _renderer.material.color = Color.blue;
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
 
-            _renderer.material.color = UnityEngine.Color.green;
+            _renderer.material.color = Color.green;
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
 
-            _renderer.material.color = UnityEngine.Color.yellow;
+            _renderer.material.color = Color.yellow;
         }
     }//Color
 
