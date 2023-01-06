@@ -10,6 +10,9 @@ public class Playar_Contrall : MonoBehaviour
 
     private Rigidbody _rbody;
     private Vector3 _velocityPoint;
+    [SerializeField] private Renderer _renderer;
+    
+    
 
 
     // Start is called before the first frame update
@@ -17,13 +20,24 @@ public class Playar_Contrall : MonoBehaviour
     {
 
         _rbody = GetComponent<Rigidbody>();
+        _renderer =GetComponent<Renderer>();
+        
+        
 
     }//Start
 
     // Update is called once per frame
     void Update()
     {
-        _horizontal = Input.GetAxis("Horizontal") * _speed * Time.deltaTime;
+       Movement();
+
+
+
+    }//Update
+
+    void Movement()
+    {
+         _horizontal = Input.GetAxis("Horizontal") * _speed * Time.deltaTime;
         _vertical = Input.GetAxis("Vertical") * _speed * Time.deltaTime;
 
         _velocityPoint = _rbody.velocity;
@@ -32,7 +46,18 @@ public class Playar_Contrall : MonoBehaviour
         _rbody.velocity = _velocityPoint;
 
 
+    }//Movement
+
+  void OnCollisionEnter(Collision collect)
+  {
+    if(collect.gameObject.CompareTag("Point"))
+    {
+            _renderer.material.color = Color.green;
 
 
-    }//Update
-}
+    }
+
+  }
+
+}//Class
+
