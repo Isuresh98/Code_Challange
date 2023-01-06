@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,18 +11,18 @@ public class Playar_Contrall : MonoBehaviour
     private Rigidbody _rbody;
     private Vector3 _velocityPoint;
     [SerializeField] private Renderer _renderer;
+    [SerializeField] private Light _Spot1;
+
     
     
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
 
         _rbody = GetComponent<Rigidbody>();
         _renderer =GetComponent<Renderer>();
-        
-        
+      _Spot1.enabled=false;
 
     }//Start
 
@@ -54,10 +54,29 @@ public class Playar_Contrall : MonoBehaviour
     {
             _renderer.material.color = Color.green;
 
-
     }
 
+  }//OnCollisionEnter
+
+void OnTriggerEnter(Collider Colect)
+{
+  if(Colect.gameObject.CompareTag("Point"))
+  {
+_Spot1.enabled=true;
+
   }
+}//OnTriggerEnter
+void OnTriggerExit(Collider Colect)
+{
+  if(Colect.gameObject.CompareTag("Point"))
+  {
+_Spot1.enabled=false;
+
+  }
+
+
+}//OnTriggerExit
+
 
 }//Class
 
