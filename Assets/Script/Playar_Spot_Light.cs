@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playar_Contrall : MonoBehaviour
+public class Playar_Spot_Light : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _horizontal;
@@ -14,7 +14,7 @@ public class Playar_Contrall : MonoBehaviour
     [SerializeField] private Light _Spot1;
 
     
-    
+
     
     // Start is called before the first frame update
     void Start()
