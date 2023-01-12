@@ -8,6 +8,8 @@ TagManager:
   - Spot1
   - Hammar
   - Spown
+  - Point2
+  - Point3
   layers:
   - Default
   - TransparentFX
