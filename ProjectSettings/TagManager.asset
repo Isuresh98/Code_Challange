@@ -10,6 +10,7 @@ TagManager:
   - Spown
   - Point2
   - Point3
+  - Bulat
   layers:
   - Default
   - TransparentFX
