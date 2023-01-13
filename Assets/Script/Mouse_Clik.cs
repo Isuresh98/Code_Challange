@@ -19,7 +19,14 @@ public class Mouse_Clik : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray,out hitOj))
             {
-                Destroy(hitOj.collider.gameObject);
+                if(hitOj.collider.gameObject.tag == "Point")
+                {
+                    Destroy(hitOj.collider.gameObject);
+
+                }
+
+
+
             }
 
 
