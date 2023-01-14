@@ -12,6 +12,8 @@ public class Car_Contraller : MonoBehaviour
 
     private GameObject _spotLight;
 
+    private GameObject _spowPoint;
+    private GameObject _prefabs;
 
 
     // Start is called before the first frame update
@@ -21,7 +23,8 @@ public class Car_Contraller : MonoBehaviour
         _spotLight = GameObject.FindWithTag("Spot1");
 
         _spotLight.SetActive(false);
-      
+        _spowPoint = GameObject.FindWithTag("Spown");
+        _prefabs = GameObject.FindWithTag("Ball");
 
     }
 
@@ -47,7 +50,7 @@ public class Car_Contraller : MonoBehaviour
             _spotLight.SetActive(false);
 
         }
-    }
+    }//BreakLight
 
     private void Movement()
     {
@@ -56,5 +59,13 @@ public class Car_Contraller : MonoBehaviour
 
         transform.Translate(0f, 0f, _vertical);
         transform.Rotate(Vector3.up * _horizotal);
+    }//Movement
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Point"))
+        {
+            Instantiate(_prefabs, _spowPoint.transform.position, _spowPoint.transform.rotation);
+        }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Point2
   - Point3
   - Bulat
+  - Ball
   layers:
   - Default
   - TransparentFX
