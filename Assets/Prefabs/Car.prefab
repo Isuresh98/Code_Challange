@@ -25136,7 +25136,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7357917531168589141}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -25160,6 +25160,8 @@ MonoBehaviour:
   _rotetSpeed: 20
   _horizotal: 0
   _vertical: 0
+  _prefabsBall: {fileID: 8151100532293166958, guid: 1d4b3a1181bbf8f46a341b286a1bf860,
+    type: 3}
 --- !u!1 &7357917531324824606
 GameObject:
   m_ObjectHideFlags: 0

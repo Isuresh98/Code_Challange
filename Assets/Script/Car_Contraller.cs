@@ -13,6 +13,7 @@ public class Car_Contraller : MonoBehaviour
     private GameObject _spotLight;
 
     private GameObject _spownPoint;
+    [SerializeField]
     private GameObject _prefabsBall;
 
 
@@ -27,7 +28,7 @@ public class Car_Contraller : MonoBehaviour
         _spotLight.SetActive(false);
 
         _spownPoint = GameObject.FindWithTag("Spown");
-        _prefabsBall = GameObject.FindWithTag("Ball");
+       
 
     }
 
